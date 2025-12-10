@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adithya Portfolio</title>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #222; }
+        header { background: #111; color: white; text-align: center; padding: 50px 20px; }
+        header h1 { margin: 0; font-size: 38px; }
+        .social-links a { color: #00c3ff; margin: 0 10px; text-decoration: none; font-weight: bold; }
+        section { padding: 50px 20px; }
+        .about, .skills, .projects { max-width: 950px; margin: auto; }
+        h2 { text-align: center; margin-bottom: 30px; font-size: 26px; }
+        .skills-grid { display: flex; gap: 20px; flex-wrap: wrap; }
+        .skill-card, .project-card {
+            background: white; padding: 20px; border-radius: 10px;
+            box-shadow: 0 0 10px #ccc; margin-bottom: 20px; min-width: 250px;
+        }
+        .skill-card { width: 30%; }
+        .deep {
+            background:#fff; padding:20px; border-radius:10px;
+            margin-top:15px; box-shadow:0 0 10px #bbb;
+        }
+        footer { text-align: center; background: #111; color: white; padding: 15px; margin-top: 30px; }
+        @media (max-width: 768px) { 
+            .skills-grid { flex-direction: column; } 
+            .skill-card { width: 100%; } 
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Adithya M</h1>
+    <p>Aspiring Web Developer</p>
+    <div class="social-links">
+        <a href="mailto:adithya178121@gmail.com">Email</a>
+        <a href="https://github.com/Adiithya178121" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/adithya-m-b63484245" target="_blank">LinkedIn</a>
+    </div>
+</header>
+
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        I’m an Aspiring Web Developer passionate about building responsive, interactive, 
+        and functional web applications using HTML, CSS, JavaScript, APIs, and cloud deployment tools.
+    </p>
+</section>
+
+<section class="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>Programming</h3>
+            <p>JavaScript, Python, HTML, CSS, Basics of C</p>
+        </div>
+        <div class="skill-card">
+            <h3>Tools</h3>
+            <p>Git, MySQL, Firebase, Vercel, Netlify</p>
+        </div>
+        <div class="skill-card">
+            <h3>Soft Skills</h3>
+            <p>Team Collaboration, Problem Solving, Communication, Time Management</p>
+        </div>
+    </div>
+</section>
+
+<section class="projects">
+    <h2>Projects</h2>
+
+    <!-- Task Manager Project -->
+    <div class="project-card">
+        <h3>Task Manager Web App</h3>
+        <p>A secure full-stack task manager with Firebase Authentication and REST API operations.</p>
+        <ul>
+            <li>User Login/Signup</li>
+            <li>CRUD for tasks (Add, Edit, Delete, View)</li>
+            <li>Filters & Sorting features</li>
+            <li>Protected Dashboard using Firebase UID</li>
+        </ul>
+
+        <div class="deep">
+            <h4>Deep Explanation</h4>
+            <p><b>Problem:</b> Users need a secure place to store and manage tasks online.</p>
+            <p><b>Tech Stack:</b> HTML, CSS, JS, Firebase Auth, Firebase DB, Fetch API, Vercel.</p>
+            <p><b>Architecture:</b> User logs in → Firebase returns UID → tasks stored under UID → CRUD operations via REST API.</p>
+            <p><b>Key Logic:</b> Tasks saved as JSON under <code>tasks/UID/taskID</code>. Each user can only access their data.</p>
+            <p><b>Features:</b> Auth, Task creation, Editing, Deleting, Sorting, Filtering.</p>
+            <p><b>Challenges solved:</b> User session handling, data isolation, async fetch management.</p>
+            <p><b>Learnings:</b> Authentication, REST APIs, state management, cloud deployment.</p>
+        </div>
+    </div>
+
+    <!-- Product Explorer Project -->
+    <div class="project-card">
+        <h3>Product Explorer Web App</h3>
+        <p>An API-based product browsing application with pagination, sorting, and filtering.</p>
+        <ul>
+            <li>Pagination (4×2 Grid)</li>
+            <li>Category filters</li>
+            <li>Sorting by price & title</li>
+            <li>Debounced search bar</li>
+        </ul>
+
+        <div class="deep">
+            <h4>Deep Explanation</h4>
+            <p><b>Problem:</b> E-commerce UI requires sorting, searching, filtering, and page navigation.</p>
+            <p><b>Tech Stack:</b> HTML, CSS, JS, FakeStore API, LocalStorage, URL Params, Vercel.</p>
+            <p><b>Architecture:</b> Fetch products → render 8 items/page → store page state in URL/localStorage.</p>
+            <p><b>Pagination:</b> Uses slice() to show items for each page.</p>
+            <p><b>Sorting:</b> Sort data by price and title before rendering.</p>
+            <p><b>Filtering:</b> Filters by categories such as electronics, fashion, etc.</p>
+            <p><b>Debouncing:</b> Reduces API calls by delaying search.</p>
+            <p><b>Challenges solved:</b> Combining sort+filter+pagination and optimizing search.</p>
+            <p><b>Learnings:</b> API handling, performance optimization, UI state control.</p>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2025 Adithya M | Portfolio Website
+</footer>
+
+<script>
+    console.log("Adithya Portfolio Loaded Successfully");
+</script>
+
+</body>
+</html>
